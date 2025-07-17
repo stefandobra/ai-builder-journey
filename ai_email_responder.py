@@ -9,7 +9,7 @@ def generate_reply(incoming_message):
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "system", "content": "You are a polite and professional customer service assistant. Draft a friendly reply to the customer's message."},
+            {"role": "system", "content": "You are a polite and professional customer service assistant. Draft a friendly reply to the customer's message Use as much info as possible. never use signature or greeting."},
             {"role": "user", "content": incoming_message}
         ]
     )
