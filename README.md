@@ -13,8 +13,8 @@ My learning journey towards AI automation and app development.
 ### 1. Clone the repo
 
 
-```git clone https://github.com/stefandobra/ai-builder-journey.git```
-```cd ai-builder-journey```
+```git clone https://github.com/stefandobra/ai-builder-journey.git
+cd ai-builder-journey```
 
 ### 2. Install dependencies
 
