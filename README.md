@@ -7,6 +7,8 @@ My learning journey towards AI automation and app development.
 - `hello_ai_builder.py` — Simple Hello World script
 - `ai_text_rewriter.py` — AI-powered text rewriter using OpenAI API
 - `ai_email_responder.py` — AI customer service email responder using OpenAI API
+- `email_responder_api.py` — API version of the AI customer service responder using FastAPI
+
 
 ## Setup Instructions:
 
