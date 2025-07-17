@@ -1,20 +1,20 @@
+import openai
 from dotenv import load_dotenv
 import os
-import openai
 
-load_dotenv
-
-openai.api_key = os.getenv("OPENAI_API_KEY")
+load_dotenv()
+client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 def rewrite_text(text):
-    response = openai.ChatCompletion.create(
+    response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "system", "content": "You are a professional text rewriter. Make the text clearer and cleaner."},
+            {"role": "system", "content": "You are a helpful assistant that rewrites text to make it clearer and simpler."},
             {"role": "user", "content": text}
         ]
     )
-    return response["choices"][0]["message"]["content"]
+    return response.choices[0].message.content
 
-user_input = input("Enter text to rewrite: ")
-print("Rewritten text:\n", rewrite_text(user_input))
+# Example use
+user_input = input("Enter text to rewrite:\n")
+print("\nRewritten text:\n", rewrite_text(user_input))
